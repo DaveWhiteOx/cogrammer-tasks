@@ -188,7 +188,7 @@ def view_mine():
                     task_found = True
 
                     # Prompt user with editing options
-                    edit_option = int(input("Enter 1 to mark task as complete, 2 to update the task or 3 to return: "))
+                    edit_option = int(input("Enter 1 to mark task as complete \n2 to update the task \nor 3 to return: "))
                     if edit_option == 1:
                         t['completed'] = True
                         task_list[idx] = t
@@ -196,7 +196,7 @@ def view_mine():
                         if t['completed'] == True:
                             print("This task cannot be edited as it is marked as complete.")
                             continue
-                        choice = int(input("Enter 1 to update assignment or 2 to change the Due Date: "))
+                        choice = int(input("Enter 1 to update assignment \n2 to change the Due Date: "))
                         if choice == 1:
                             assign = input("Enter user to assign task to: ").lower()
                             t['username'] = assign
